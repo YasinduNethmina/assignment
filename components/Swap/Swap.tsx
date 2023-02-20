@@ -1,13 +1,18 @@
 // use client directive to enable client-side features
 "use client";
 
-import { useQuery } from "react-query";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import React from "react";
+import { useQuery } from "react-query";
 
 type Props = {};
 
 const Swap = (props: Props) => {
+  const [firstSelect, setFirstSelect] = useState<number>(0);
+  const [secondSelect, setSecondSelect] = useState<number>(0);
+  const [firstInput, setFirstInput] = useState<any>(1);
+  const [secondInput, setSecondInput] = useState<any>(1);
+
   const { data, isLoading, error } = useQuery(["coins"], () => {
     return axios
       .get(
@@ -15,6 +20,13 @@ const Swap = (props: Props) => {
       )
       .then((res) => res.data);
   });
+
+  let firstTotal = firstSelect * firstInput;
+  let secondTotal = secondSelect * secondInput;
+
+  useEffect(() => {
+    setSecondInput(firstTotal / secondSelect);
+  }, [firstTotal, secondTotal]);
 
   return (
     <div className="w-full">
@@ -26,30 +38,61 @@ const Swap = (props: Props) => {
         <div></div>
         <input
           type="number"
+          value={firstInput}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setFirstInput(e.target.value)
+          }
           className="mb-12 mt-5 w-80 border-2 py-2 pl-5 outline-none"
         />
 
         <select
-          name=""
-          className="absolute right-10 top-24 mt-1 rounded-sm p-1 shadow-xl outline-none"
-          id=""
+          onChange={(e) => setFirstSelect(Number(e.target.value))}
+          name="coinList"
+          className="absolute right-10 top-24 mt-1 rounded-sm border-2 border-black p-1 shadow-xl outline-none"
+          id="coinList"
         >
-          {data?.map((coin: any) => {
-            return (
-              <option value="" key={coin.id}>
-                {String(coin.symbol).toUpperCase()}
-              </option>
-            );
-          })}
+          {data &&
+            data.map((coin: any) => {
+              return (
+                <option
+                  selected={coin.id === "bitcoin" ? true : false}
+                  key={coin.id}
+                  value={coin.current_price}
+                  className="text-center"
+                >
+                  {String(coin.symbol).toUpperCase()}
+                </option>
+              );
+            })}
         </select>
 
-        <input type="number" className="w-80 border-2 py-2 pl-5 outline-none" />
+        <input
+          value={secondInput}
+          type="number"
+          className="w-80 border-2 py-2 pl-5 outline-none"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setSecondInput(e.target.value)
+          }
+        />
         <select
-          name=""
-          className="absolute right-10 top-48 mt-0 rounded-sm p-1 shadow-xl outline-none"
-          id=""
+          onChange={(e) => setSecondSelect(Number(e.target.value))}
+          name="coinList"
+          className="absolute right-10 top-48 rounded-sm border-2 border-black p-1 shadow-xl outline-none"
+          id="coinList"
         >
-          <option value="">Ether</option>
+          {data &&
+            data.map((coin: any) => {
+              return (
+                <option
+                  selected={coin.id === "tether" ? true : false}
+                  key={coin.id}
+                  value={coin.current_price}
+                  className="text-center"
+                >
+                  {String(coin.symbol).toUpperCase()}
+                </option>
+              );
+            })}
         </select>
 
         <div className="mx-10 text-start text-white">
