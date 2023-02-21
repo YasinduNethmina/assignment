@@ -3,6 +3,8 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Camera } from "react-feather";
+
 import Twitter from "@mui/icons-material/Twitter";
 import Facebook from "@mui/icons-material/Facebook";
 import LightMode from "@mui/icons-material/LightMode";
@@ -40,7 +42,7 @@ const HeadingBar = (props: Props) => {
               alt="darkmode"
             />
           ) : (
-            <LightMode
+            <Camera
               onClick={() => setTheme("light")}
               className="h-16 w-16 text-3xl lg:p-5 xl:p-4"
             />
