@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 
 import { DarkMode, LightMode } from "@styled-icons/material";
 import { Linkedin, Facebook, Twitter } from "@styled-icons/bootstrap";
@@ -8,7 +8,7 @@ import Link from "next/link";
 
 type Props = {};
 
-const HeadingBar = (props: Props) => {
+const HeadingBar: FC = (props: Props) => {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
 

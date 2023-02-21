@@ -13,13 +13,11 @@ import braveImg from "../../public/assets/walletLogos/brave.png";
 type Props = {};
 
 const NavBar = (props: Props) => {
-  const [sidebarActive, setSidebarActive] = useState(false);
+  const [sidebarActive, setSidebarActive] = useState<boolean>(false);
+  const [connectWallet, setConnectWallet] = useState<boolean>(false);
+  const [showNetwork, setShowNetwork] = useState<boolean>(false);
   const [sidebarCloseFromChild, setSidebarCloseFromChild] =
     useState<boolean>(false);
-
-  const [connectWallet, setConnectWallet] = useState<boolean>(false);
-
-  const [showNetwork, setShowNetwork] = useState(false);
 
   const handleSidebarFromChild = (data: boolean) => {
     setSidebarCloseFromChild(data);
@@ -43,11 +41,7 @@ const NavBar = (props: Props) => {
             <Menu className="text-3xl" />
           </button>
 
-          <Image
-            src={curveImg}
-            className="dark:text- mx-2 h-10 w-10"
-            alt="logo"
-          />
+          <Image src={curveImg} className="mx-2 h-10 w-10" alt="logo" />
           <h1 className="cursor-pointer text-3xl font-light italic dark:text-white lg:pr-4">
             Curve
           </h1>

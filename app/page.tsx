@@ -3,8 +3,10 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import Image from "next/image";
-import BackgroundImg from "../public/assets/background.png";
 import { Inter } from "@next/font/google";
+
+import BackgroundImg from "../public/assets/background.png";
+
 import Swap from "@/components/Swap/Swap";
 
 const inter = Inter({ subsets: ["latin"] });

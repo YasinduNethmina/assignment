@@ -12,8 +12,6 @@ const Sidebar: FC<Props> = ({ handleSidebarFromChild }) => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const styleSideBarButton = "mr-5 ml-2 text-4xl text-[#8B96A5]";
-
   return (
     <>
       <div className="fixed top-0 left-0 z-50 w-full bg-transparent lg:hidden">

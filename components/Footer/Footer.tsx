@@ -1,8 +1,8 @@
-import React from "react";
+import { FC } from "react";
 
 type Props = {};
 
-const Footer = (props: Props) => {
+const Footer: FC = (props: Props) => {
   return (
     <div className="absolute bottom-0 z-40 w-full bg-[#68657B] px-16 py-6 text-[#D9D8CF] dark:border-t-2 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:flex">
       <div className="hidden cursor-pointer items-center justify-start md:flex md:w-1/4">

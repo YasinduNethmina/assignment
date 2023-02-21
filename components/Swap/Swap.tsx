@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FC } from "react";
 import axios from "axios";
 import Image from "next/image";
 import { useQuery } from "react-query";
@@ -7,11 +7,11 @@ import { Sliders, Search } from "react-feather";
 
 type Props = {};
 
-const Swap = (props: Props) => {
+const Swap: FC = (props: Props) => {
   const [searchToken, setSearchToken] = useState<string>("");
   const [settingsActice, setSettingsActive] = useState<boolean>(false);
   const [tokenActive, setTokenActive] = useState<boolean>(false);
-  const [tokenValue, setTokenValue] = useState();
+  const [tokenValue, setTokenValue] = useState<number | string>(0);
 
   const { data, isLoading, error } = useQuery(["coins"], () => {
     return axios
@@ -86,7 +86,7 @@ const Swap = (props: Props) => {
             className="mt-4 w-80 border-2 border-black py-2 pl-5 text-3xl font-extrabold  text-gray-500 placeholder-gray-400 outline-none dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-gray-300 dark:placeholder-gray-400"
           />
           <p className="pl-8 pt-1 text-start text-sm">≈ $23,496.00</p>
-          <p className="text-4xl">↕️</p>
+          <p className="hidden text-4xl md:block">↕️</p>
 
           <button
             onClick={() => setTokenActive((prev) => !prev)}
@@ -107,7 +107,7 @@ const Swap = (props: Props) => {
           <button
             onClick={() => setTokenActive((prev) => !prev)}
             name="coinList"
-            className="absolute top-44 right-10 mt-5 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-48 md:mt-11"
+            className="absolute top-32 right-10 mt-7 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-48 md:mt-11"
             id="coinList"
           >
             {tokenValue ? tokenValue : "USDT"}

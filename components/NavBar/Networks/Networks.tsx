@@ -1,5 +1,6 @@
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
+
 import avaxImg from "../../../public/assets/cryptoLogos/avax.png";
 import solImg from "../../../public/assets/cryptoLogos/sol.png";
 import bnbImg from "../../../public/assets/cryptoLogos/bnb.png";
@@ -8,7 +9,7 @@ import maticImg from "../../../public/assets/cryptoLogos/matic.png";
 
 type Props = {};
 
-const Networks = (props: Props) => {
+const Networks: FC = (props: Props) => {
   return (
     <div className="dark:border-[#9A9E9E border-2 border-black font-semibold text-black transition-all dark:bg-[#31353F] dark:text-[#9A9E9E] dark:hover:bg-[#1B2028]">
       <div>
