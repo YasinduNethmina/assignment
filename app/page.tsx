@@ -14,14 +14,14 @@ export default function Home() {
 
   return (
     <QueryClientProvider client={client}>
-      <main className="bg-[#E6E4F6]">
+      <main className="">
         <Image
           className="fixed mb-64 h-96 w-full object-cover"
           src={BackgroundImg}
           alt="banner-img"
         />
 
-        <div className="absolute left-1/2 top-1/3 z-40 h-96 w-96 -translate-x-1/2 -translate-y-1/3 transform xl:top-1/3 xl:-translate-y-1/3">
+        <div className="absolute left-1/2 top-1/3 z-40 h-96 w-96 -translate-x-1/2 -translate-y-1/3 transform bg-black xl:top-1/3 xl:-translate-y-1/3">
           <Swap />
         </div>
       </main>

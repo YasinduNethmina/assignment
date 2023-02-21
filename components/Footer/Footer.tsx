@@ -4,7 +4,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="absolute bottom-0 z-40 w-full bg-[#68657B] px-16 py-6 text-[#D9D8CF] sm:flex">
+    <div className="absolute bottom-0 z-40 w-full bg-[#68657B] px-16 py-6 text-[#D9D8CF] dark:bg-[#31353F] sm:flex">
       <div className="hidden items-center justify-start md:flex md:w-1/4">
         <h1 className="text-4xl font-extrabold ">Curve</h1>
       </div>

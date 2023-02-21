@@ -31,8 +31,8 @@ const NavBar: FC<Props> = (props: Props) => {
       <div
         className={
           sidebarActive
-            ? "navbar fixed -top-1 z-50 flex w-full bg-[#E6E4F6] px-4 py-4 blur-sm md:px-16 lg:top-16 lg:blur-none"
-            : "navbar fixed -top-1 z-50 flex w-full border-t-2 border-black bg-[#E6E4F6] px-4 py-2 md:px-16 lg:top-16"
+            ? "navbar fixed -top-1 z-50 flex w-full bg-[#E6E4F6] px-4 py-4 blur-sm dark:bg-[#31353F] dark:text-[#9A9E9E] md:px-16 lg:top-16 lg:blur-none"
+            : "navbar fixed -top-1 z-50 flex w-full border-t-2 border-black bg-[#E6E4F6] px-4 py-2 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-[#9A9E9E] md:px-16 lg:top-16"
         }
       >
         <div className="flex w-1/2 items-center justify-start">
@@ -43,14 +43,14 @@ const NavBar: FC<Props> = (props: Props) => {
             <MenuIcon className="text-3xl" />
           </button>
 
-          <h1 className="text-3xl font-bold lg:pr-4">Curve</h1>
-          <button className="mx-2 hidden bg-black px-4 py-2 text-lg text-white lg:block">
+          <h1 className="text-3xl font-bold dark:text-white lg:pr-4">Curve</h1>
+          <button className="mx-2 hidden bg-black px-4 py-2 text-lg text-white dark:hover:text-white lg:block">
             SWAP
           </button>
-          <button className="mx-2 hidden px-4 py-2 text-lg hover:bg-[#C6C2E7] lg:block">
+          <button className="mx-2 hidden px-4 py-2 text-lg transition-all hover:bg-[#C6C2E7] dark:hover:bg-[#1B2028] dark:hover:text-white lg:block">
             POOLS
           </button>
-          <button className="mx-2 hidden px-4 py-2 text-lg hover:bg-[#C6C2E7] lg:block">
+          <button className="mx-2 hidden px-4 py-2 text-lg transition-all hover:bg-[#C6C2E7] dark:hover:bg-[#1B2028] dark:hover:text-white lg:block">
             DASHBOARD
           </button>
         </div>
@@ -58,13 +58,13 @@ const NavBar: FC<Props> = (props: Props) => {
         <div className="flex w-1/2 justify-end">
           <button
             onClick={() => setShowNetwork((prev) => !prev)}
-            className="flex items-center justify-center border-2 border-black p-3 font-bold transition-all hover:bg-[#C6C2E7] lg:mr-5"
+            className="flex items-center justify-center border-2 border-black p-3 font-bold transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:border-[#1b2028] dark:hover:bg-[#1B2028] dark:hover:text-[#9A9E9E] lg:mr-5"
           >
             ETHEREUM <ArrowDropDownIcon />
           </button>
           <button
             onClick={() => setConnectWallet((prev) => !prev)}
-            className="hidden border-2 border-black p-3 font-bold transition-all hover:bg-[#C6C2E7] lg:block"
+            className="hidden border-2 border-black p-3 font-bold transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:border-[#1b2028] dark:hover:bg-[#1B2028] dark:hover:text-[#9A9E9E] lg:block"
           >
             🔴 CONNECT WALLET
           </button>
@@ -89,7 +89,7 @@ const NavBar: FC<Props> = (props: Props) => {
       <div
         className={
           connectWallet
-            ? "connect-wallet absolute top-1/3 left-1/2 z-50 mt-10 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/3 transform border-2 border-black bg-[#E6E4F6] p-4 text-center md:w-1/3"
+            ? "connect-wallet absolute top-1/3 left-1/2 z-50 mt-10 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/3 transform border-2 border-black bg-[#E6E4F6] p-4 text-center dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white md:w-1/3"
             : "hidden"
         }
       >
@@ -103,7 +103,7 @@ const NavBar: FC<Props> = (props: Props) => {
             </button>
 
             <div className="mt-5 flex items-center justify-around text-center">
-              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:bg-[#1B2028] md:flex md:p-4 md:py-1 xl:mb-0">
                 <div className="items-center justify-center md:flex">
                   <Image
                     src={metamaskImg}
@@ -115,7 +115,7 @@ const NavBar: FC<Props> = (props: Props) => {
                   </h4>
                 </div>
               </button>
-              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:bg-[#1B2028] md:flex md:p-4 md:py-1 xl:mb-0">
                 <div className="items-center justify-center md:flex">
                   <Image
                     src={braveImg}
@@ -130,19 +130,19 @@ const NavBar: FC<Props> = (props: Props) => {
             </div>
 
             <div className="my-4 flex items-center justify-around text-center">
-              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:bg-[#1B2028] md:flex md:p-4 md:py-1 xl:mb-0">
                 <div className="items-center justify-center md:flex">
                   <Image
-                    src={metamaskImg}
+                    src={braveImg}
                     className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
                     alt="metamask"
                   />
                   <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
-                    Metamask
+                    Brave
                   </h4>
                 </div>
               </button>
-              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:bg-[#1B2028] md:flex md:p-4 md:py-1 xl:mb-0">
                 <div className="items-center justify-center md:flex">
                   <Image
                     src={metamaskImg}
