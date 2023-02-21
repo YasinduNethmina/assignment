@@ -46,7 +46,7 @@ input[type="number"] {
 @media (max-height: 800px) {
   .swap {
     position: absolute;
-    bottom: -0.7rem;
+    bottom: -0.8rem;
   }
 
   .connect-wallet {
