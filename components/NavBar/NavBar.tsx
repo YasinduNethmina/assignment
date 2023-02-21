@@ -4,7 +4,6 @@ import { useState, FC } from "react";
 import { ArrowDropDownIcon, MenuIcon } from "@/utils/MaterialIcons";
 import Sidebar from "../SideBar/Sidebar";
 import Networks from "./Networks/Networks";
-import Link from "next/link";
 import Image from "next/image";
 
 import curveImg from "../../public/assets/walletLogos/curve.png";
