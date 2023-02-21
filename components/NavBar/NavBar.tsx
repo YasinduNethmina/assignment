@@ -7,6 +7,7 @@ import Sidebar from "../SideBar/Sidebar";
 import Networks from "./Networks/Networks";
 import Image from "next/image";
 
+import MenuSvg from "../../public/assets/icons/menu.svg";
 import curveImg from "../../public/assets/walletLogos/curve.png";
 import metamaskImg from "../../public/assets/walletLogos/metamask.png";
 import braveImg from "../../public/assets/walletLogos/brave.png";
@@ -41,7 +42,7 @@ const NavBar: FC<Props> = (props: Props) => {
             onClick={() => setSidebarActive((prev) => !prev)}
             className="mr-5 block lg:hidden"
           >
-            <Menu className="text-3xl" />
+            <Image src={MenuSvg} alt="dfg" />
           </button>
 
           <Image

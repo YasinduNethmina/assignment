@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 
 import Twitter from "@mui/icons-material/Twitter";
@@ -7,6 +8,8 @@ import Facebook from "@mui/icons-material/Facebook";
 import LightMode from "@mui/icons-material/LightMode";
 import DarkMode from "@mui/icons-material/DarkMode";
 import LinkedIn from "@mui/icons-material/LinkedIn";
+
+import MoonSvg from "../../public/assets/icons/darkmode.svg";
 
 type Props = {};
 
@@ -31,7 +34,8 @@ const HeadingBar = (props: Props) => {
       <div className="mr-10 flex w-1/2 items-center justify-end">
         <button className="mx-5 transition-all hover:bg-[#C6C2E7] dark:hover:bg-[#1B2028] dark:hover:text-white">
           {theme === "light" ? (
-            <DarkMode
+            <Image
+              src={MoonSvg}
               onClick={() => setTheme("dark")}
               className="h-16 w-16 text-3xl lg:p-5 xl:p-4"
             />
