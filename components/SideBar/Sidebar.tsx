@@ -29,17 +29,19 @@ const Sidebar: FC<Props> = ({ handleSidebarFromChild }) => {
           <div>
             <SideBarButton title="Swap" />
             <SideBarButton title="Pools" />
-            <SideBarButton title="Dashboard" />
-            <SideBarButton title="Visit old UI" />
-            <SideBarButton title="Goverence" />
-            <SideBarButton title="Community" />
-            <SideBarButton title="Resources" />
             <SideBarButton
               func={() =>
                 theme === "dark" ? setTheme("light") : setTheme("dark")
               }
-              title="Mode"
+              title="Dark / Night Mode (Working!)"
             />
+            <SideBarButton title="Dashboard" />
+
+            <SideBarButton title="Visit old UI" />
+            <SideBarButton title="Goverence" />
+            <SideBarButton title="Community" />
+            <SideBarButton title="Resources" />
+
             <SideBarButton title="English" />
             <div className="my-10 h-1 w-full bg-black dark:bg-[#9A9E9E]" />
             <div className="mb-5 text-left">
