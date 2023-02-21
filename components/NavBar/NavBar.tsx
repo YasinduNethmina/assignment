@@ -7,6 +7,7 @@ import Networks from "./Networks/Networks";
 import Link from "next/link";
 import Image from "next/image";
 
+import curveImg from "../../public/assets/walletLogos/curve.png";
 import metamaskImg from "../../public/assets/walletLogos/metamask.png";
 import braveImg from "../../public/assets/walletLogos/brave.png";
 
@@ -43,9 +44,15 @@ const NavBar: FC<Props> = (props: Props) => {
             <MenuIcon className="text-3xl" />
           </button>
 
-          <h1 className="cursor-pointer text-3xl font-bold dark:text-white lg:pr-4">
+          <Image
+            src={curveImg}
+            className="dark:text- mx-2 h-10 w-10"
+            alt="logo"
+          />
+          <h1 className="cursor-pointer text-3xl font-light italic dark:text-white lg:pr-4">
             Curve
           </h1>
+
           <button className="mx-2 hidden bg-black px-4 py-2 text-lg text-white dark:hover:text-white lg:block">
             SWAP
           </button>
