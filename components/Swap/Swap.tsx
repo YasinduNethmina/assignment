@@ -34,12 +34,12 @@ const Swap = (props: Props) => {
   if (isLoading || error) {
     return (
       <div
-        className="swap h-96 w-full border-2 border-black bg-white"
+        className="h-96 w-full border-2 border-black bg-white dark:border-[#9A9E9E] dark:bg-[#1B2028] dark:text-white"
         role="status bg-white"
       >
-        <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black">
+        <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
           <h4 className="py-5 text-center text-2xl font-bold">Swap</h4>
-          <button onClick={() => setSettingsActive((prev) => !prev)}>
+          <button>
             <TuneIcon />
           </button>
         </div>
@@ -78,7 +78,7 @@ const Swap = (props: Props) => {
         }
       >
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
-          <h4 className="py-5 text-center text-2xl font-bold">Swap</h4>
+          <h4 className="text-center text-2xl font-bold md:py-5">Swap</h4>
           <button onClick={() => setSettingsActive((prev) => !prev)}>
             <TuneIcon />
           </button>
@@ -88,14 +88,14 @@ const Swap = (props: Props) => {
           <input
             type="number"
             placeholder="0.00"
-            className="mt-4 w-80 border-2 border-black py-2 pl-5 text-3xl font-extrabold placeholder-gray-500 outline-none dark:text-gray-600"
+            className="mt-4 w-80 border-2 border-black py-2 pl-5 text-3xl font-extrabold  text-gray-500 placeholder-gray-400 outline-none dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-gray-300 dark:placeholder-gray-400"
           />
-          <p className="pl-8 text-start text-sm">≈ $23,496.00</p>
+          <p className="pl-8 pt-1 text-start text-sm">≈ $23,496.00</p>
 
           <button
             onClick={() => setTokenActive((prev) => !prev)}
             name="coinList"
-            className="dark: absolute right-10 top-24 mt-1 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#1B2028]"
+            className="absolute right-10 top-12 mt-3 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-24 md:mt-1"
             id="coinList"
           >
             {tokenValue ? tokenValue : "BTC"}
@@ -104,14 +104,14 @@ const Swap = (props: Props) => {
           <input
             placeholder="0.00"
             type="number"
-            className="mt-5 w-80 border-2 border-black py-2 pl-5 text-3xl font-extrabold placeholder-gray-500 outline-none dark:text-gray-600"
+            className="mt-4 w-80 border-2 border-black py-2 pl-5 text-3xl font-extrabold  text-gray-500 placeholder-gray-400 outline-none dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-gray-300 dark:placeholder-gray-400"
           />
-          <p className="pl-8 text-start text-sm">≈ $1.00</p>
+          <p className="pl-8 pt-1 text-start text-sm">≈ $1.00</p>
 
           <button
             onClick={() => setTokenActive((prev) => !prev)}
             name="coinList"
-            className="absolute right-10 top-48 mt-1 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#1B2028] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#1B2028]"
+            className="absolute top-36 right-10 mt-3 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-48 md:mt-1"
             id="coinList"
           >
             {tokenValue ? tokenValue : "USDT"}
@@ -119,7 +119,7 @@ const Swap = (props: Props) => {
 
           <div className="mx-10 text-start text-black dark:text-white">
             <div className="flex justify-between">
-              <h4 className="my-4">Exchange rate (incl. fees)</h4>
+              <h4 className="my-3">Exchange rate (incl. fees)</h4>
               <h4 className="my-3">-</h4>
             </div>
 
@@ -149,13 +149,18 @@ const Swap = (props: Props) => {
       <div
         className={
           tokenActive
-            ? "absolute top-1/2 left-1/2 z-40 mt-10 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F]"
+            ? "anim absolute top-1/2 left-1/2 z-40 mt-5 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:mt-5 md:mt-10"
             : "hidden h-0 w-0"
         }
       >
         <div className="flex justify-between font-bold">
           <h4 className="text-2xl dark:text-white">Select a token</h4>
-          <button onClick={() => setTokenActive((prev) => !prev)}>✖</button>
+          <button
+            className="hover:text-gray-500"
+            onClick={() => setTokenActive((prev) => !prev)}
+          >
+            X
+          </button>
         </div>
 
         <div>
@@ -164,7 +169,7 @@ const Swap = (props: Props) => {
             value={searchToken}
             type="text"
             onChange={(e) => setSearchToken(e.target.value)}
-            className="my-2 w-full border-2 border-black py-2 pl-10 outline-none dark:border-[#9A9E9E]"
+            className="my-2 w-full border-2 border-black py-2 pl-10 outline-none dark:border-[#9A9E9E] dark:bg-[#31353F]"
           />
 
           <div className="flex flex-wrap justify-around">
@@ -173,6 +178,7 @@ const Swap = (props: Props) => {
                 if (coin.market_cap_rank <= 6)
                   return (
                     <button
+                      key={coin.id}
                       onClick={() =>
                         handleTokenSelect(coin.symbol.toUpperCase())
                       }
@@ -235,13 +241,18 @@ const Swap = (props: Props) => {
       <div
         className={
           settingsActice
-            ? "absolute top-1/2 left-1/2 z-40 mt-10 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-8 dark:bg-[]"
+            ? "anim swap absolute top-1/2 left-1/2 z-40 mt-5 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-8 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:mt-5 md:mt-10"
             : "hidden h-0 w-0"
         }
       >
         <div className="flex justify-between font-bold">
           <h4 className="text-2xl">Advanced Settings</h4>
-          <button onClick={() => setSettingsActive((prev) => !prev)}>✖</button>
+          <button
+            className="hover:text-gray-500"
+            onClick={() => setSettingsActive((prev) => !prev)}
+          >
+            X
+          </button>
         </div>
 
         <div>
@@ -261,14 +272,17 @@ const Swap = (props: Props) => {
             <input
               type="text"
               placeholder="Custom"
-              className="mr-2 border-2 border-black py-2 pl-5 outline-none"
+              className="mr-2 border-2 border-black bg-[#C6C2E7] py-2 pl-5 placeholder-gray-600 outline-none dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-gray-300 dark:placeholder-gray-400"
             />
             <h6>%</h6>
           </div>
         </div>
 
         <div className="my-5 flex w-full justify-between">
-          <button className="w-2/5 bg-gray-200 text-blue-500 transition-all hover:bg-blue-200">
+          <button
+            onClick={() => setSettingsActive((prev) => !prev)}
+            className="w-2/5 border-2 border-black bg-gray-200 text-black transition-all hover:border-blue-600 hover:bg-blue-200 hover:text-blue-600"
+          >
             Discard
           </button>
           <button className="w-2/5 bg-blue-600 py-3 text-white transition-all hover:bg-blue-700">

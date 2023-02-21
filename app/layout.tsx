@@ -1,7 +1,10 @@
+"use client";
+
 import Footer from "@/components/Footer/Footer";
 import HeadingBar from "@/components/HeadingBar/HeadingBar";
 import NavBar from "@/components/NavBar/NavBar";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({
   children,
@@ -11,15 +14,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="z-50 bg-[#E6E4F6] dark:bg-[#31353F]">
-        <HeadingBar />
-        <NavBar />
+      <ThemeProvider enableSystem={false} attribute="class">
+        <body className="bg-[#E6E4F6] dark:bg-[#31353F]">
+          <HeadingBar />
+          <NavBar />
 
-        {children}
-        <div className="footer">
-          <Footer />
-        </div>
-      </body>
+          {children}
+          <div className="footer">
+            <Footer />
+          </div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
