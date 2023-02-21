@@ -14,7 +14,7 @@ type Props = {};
 
 const HeadingBar = (props: Props) => {
   return (
-    <div className="z-50 hidden border-black bg-[#E6E4F6] lg:flex">
+    <div className="top-0 hidden border-black bg-[#E6E4F6] lg:flex">
       <div className="ml-16 hidden w-1/2 items-center justify-start py-2 md:flex">
         <h4 className="mr-10 hidden text-xl font-bold lg:block lg:text-sm xl:text-xl">
           Total Deposits: $4,782,541,899

@@ -4,14 +4,14 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="hidden bg-[#68657B] px-16 py-4 text-[#D9D8CF] lg:flex 2xl:absolute 2xl:bottom-0 2xl:w-full 2xl:py-6">
-      <div className="flex w-1/4 items-center justify-start">
+    <div className="absolute bottom-0 z-40 w-full bg-[#68657B] px-16 py-6 text-[#D9D8CF] sm:flex">
+      <div className="hidden items-center justify-start md:flex md:w-1/4">
         <h1 className="text-4xl font-extrabold ">Curve</h1>
       </div>
 
-      <div className="flex w-3/4">
+      <div className="flex w-full md:w-3/4">
         <div className="flex w-full">
-          <div className="w-1/3 justify-start">
+          <div className="w-1/2 justify-start md:w-1/3">
             <h4 className="mb-4 text-center text-xl font-bold underline">
               Community
             </h4>
@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
                 <p>Discord</p>
               </div>
 
-              <div className="">
+              <div className="hidden md:block">
                 <p>YouTube</p>
                 <p>Dune Analytics</p>
                 <p>Llama Airforce</p>
@@ -31,7 +31,7 @@ const Footer = (props: Props) => {
             </div>
           </div>
 
-          <div className="h-24 w-2/3 justify-end">
+          <div className="h-24 w-1/2 justify-end md:w-2/3">
             <h4 className="mb-4 text-center text-xl font-bold underline">
               Resources
             </h4>
@@ -44,14 +44,14 @@ const Footer = (props: Props) => {
                 <p>Contracts</p>
               </div>
 
-              <div className="">
+              <div className="hidden md:block">
                 <p>Bug Bounty</p>
                 <p>FAQ</p>
                 <p>Integrations</p>
                 <p>Donate</p>
               </div>
 
-              <div className="">
+              <div className="hidden md:block">
                 <p>Developer Docs</p>
                 <p>News</p>
                 <p>Resources</p>
@@ -60,6 +60,10 @@ const Footer = (props: Props) => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex w-full items-center justify-center text-center md:hidden">
+        <h1 className="text-4xl font-extrabold">Curve</h1>
       </div>
     </div>
   );

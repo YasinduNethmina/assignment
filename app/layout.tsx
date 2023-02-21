@@ -11,11 +11,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>
+      <body className="z-50">
         <HeadingBar />
         <NavBar />
+
         {children}
-        <Footer />
+        <div className="footer">
+          <Footer />
+        </div>
       </body>
     </html>
   );

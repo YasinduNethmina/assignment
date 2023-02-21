@@ -10,6 +10,9 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import SwapVertIcon from "@mui/icons-material/SwapVert";
+import TuneIcon from "@mui/icons-material/Tune";
+
+import SearchIcon from "@mui/icons-material/Search";
 
 export {
   LightModeIcon,
@@ -21,4 +24,6 @@ export {
   ArrowDropDownIcon,
   MenuIcon,
   SwapVertIcon,
+  TuneIcon,
+  SearchIcon,
 };

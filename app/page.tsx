@@ -21,7 +21,7 @@ export default function Home() {
           alt="banner-img"
         />
 
-        <div className="trabn absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform bg-red-500">
+        <div className="absolute left-1/2 top-1/3 z-40 h-96 w-96 -translate-x-1/2 -translate-y-1/3 transform xl:top-1/3 xl:-translate-y-1/3">
           <Swap />
         </div>
       </main>
