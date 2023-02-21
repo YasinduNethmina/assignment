@@ -1,16 +1,10 @@
 import { useState, useEffect } from "react";
+
+import { DarkMode, LightMode } from "@styled-icons/material";
+import { Linkedin, Facebook, Twitter } from "@styled-icons/bootstrap";
+
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import Link from "next/link";
-
-import { Camera } from "react-feather";
-
-import Twitter from "@mui/icons-material/Twitter";
-import Facebook from "@mui/icons-material/Facebook";
-import LightMode from "@mui/icons-material/LightMode";
-import LinkedIn from "@mui/icons-material/LinkedIn";
-
-import { DarkMode } from "@/utils/IconsExports";
 
 type Props = {};
 
@@ -35,14 +29,12 @@ const HeadingBar = (props: Props) => {
       <div className="mr-10 flex w-1/2 items-center justify-end">
         <button className="mx-5 transition-all hover:bg-[#C6C2E7] dark:hover:bg-[#1B2028] dark:hover:text-white">
           {theme === "light" ? (
-            <Image
-              src={DarkMode}
+            <DarkMode
               onClick={() => setTheme("dark")}
               className="h-16 w-16 text-3xl lg:p-5 xl:p-4"
-              alt="darkmode"
             />
           ) : (
-            <Camera
+            <LightMode
               onClick={() => setTheme("light")}
               className="h-16 w-16 text-3xl lg:p-5 xl:p-4"
             />
@@ -51,7 +43,7 @@ const HeadingBar = (props: Props) => {
         <select
           defaultValue="English"
           name=""
-          className="dark:hover:text-blck mx-5 cursor-pointer bg-[#E6E4F6] px-2 py-1 text-base outline-none  transition-all hover:bg-[#C6C2E7] focus:bg-[#E6E4F6] dark:bg-transparent dark:hover:bg-[#1B2028] dark:focus:bg-transparent xl:text-2xl"
+          className="dark:hover:text-blck mx-5 cursor-pointer bg-[#E6E4F6] px-2 py-1 text-base outline-none transition-all  hover:bg-[#C6C2E7] focus:bg-[#E6E4F6] dark:bg-transparent dark:hover:bg-[#1B2028] dark:hover:text-white dark:focus:bg-transparent xl:text-2xl"
           id=""
         >
           <option className="bg-black text-white" value="English">
@@ -79,7 +71,7 @@ const HeadingBar = (props: Props) => {
           href="https://www.linkedin.com/in/yasinduneth/"
           className="mx-5 transition-all hover:bg-[#C6C2E7] dark:hover:bg-[#1B2028] dark:hover:text-white"
         >
-          <LinkedIn className="h-16 w-16 lg:p-5 xl:p-4" />
+          <Linkedin className="h-16 w-16 lg:p-5 xl:p-4" />
         </Link>
         <Link
           target="_blank"

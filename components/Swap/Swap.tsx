@@ -1,12 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-
-import Tune from "@mui/icons-material/Tune";
-import Search from "@mui/icons-material/Search";
-import EtherImg from "../../public/assets/cryptoLogos/eth.png";
 import Image from "next/image";
-
 import { useQuery } from "react-query";
+
+import { Sliders, Search } from "react-feather";
 
 type Props = {};
 
@@ -38,7 +35,7 @@ const Swap = (props: Props) => {
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
           <h4 className="py-5 text-center text-2xl font-bold">Swap</h4>
           <button>
-            <Tune />
+            <Sliders className="text-3xl" />
           </button>
         </div>
         <div
@@ -78,7 +75,7 @@ const Swap = (props: Props) => {
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
           <h4 className="text-center text-2xl font-bold md:py-5">Swap</h4>
           <button onClick={() => setSettingsActive((prev) => !prev)}>
-            <Search />
+            <Sliders />
           </button>
         </div>
 
@@ -89,6 +86,7 @@ const Swap = (props: Props) => {
             className="mt-4 w-80 border-2 border-black py-2 pl-5 text-3xl font-extrabold  text-gray-500 placeholder-gray-400 outline-none dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-gray-300 dark:placeholder-gray-400"
           />
           <p className="pl-8 pt-1 text-start text-sm">≈ $23,496.00</p>
+          <p className="text-4xl">↕️</p>
 
           <button
             onClick={() => setTokenActive((prev) => !prev)}
@@ -109,7 +107,7 @@ const Swap = (props: Props) => {
           <button
             onClick={() => setTokenActive((prev) => !prev)}
             name="coinList"
-            className="absolute top-36 right-10 mt-3 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-48 md:mt-1"
+            className="absolute top-44 right-10 mt-5 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-48 md:mt-11"
             id="coinList"
           >
             {tokenValue ? tokenValue : "USDT"}
