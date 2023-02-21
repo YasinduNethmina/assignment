@@ -14,8 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <ThemeProvider enableSystem={false} attribute="class">
-        <body className="bg-[#E6E4F6] dark:bg-[#31353F]">
+
+      <body className="bg-[#E6E4F6] dark:bg-[#31353F]">
+        <ThemeProvider enableSystem={false} attribute="class">
           <HeadingBar />
           <NavBar />
 
@@ -23,8 +24,8 @@ export default function RootLayout({
           <div className="footer">
             <Footer />
           </div>
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
