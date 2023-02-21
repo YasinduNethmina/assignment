@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import Image from "next/image";
@@ -13,6 +13,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const client = new QueryClient();
+
+  function setZoom() {
+    const root = document.documentElement;
+    root.style.fontSize = "90%";
+  }
+
+  useEffect(() => {
+    setZoom();
+  }, []);
 
   return (
     <QueryClientProvider client={client}>
