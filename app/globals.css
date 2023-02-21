@@ -25,4 +25,9 @@ input[type="number"] {
     position: absolute;
     top: 4.5rem;
   }
+
+  .connect-wallet {
+    position: absolute;
+    top: 21rem;
+  }
 }

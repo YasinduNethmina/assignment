@@ -33,22 +33,37 @@ const HeadingBar = (props: Props) => {
           className="mx-5 cursor-pointer bg-[#E6E4F6] px-2 py-1 text-base outline-none hover:bg-[#C6C2E7] focus:bg-[#E6E4F6] xl:text-2xl"
           id=""
         >
-          <option className="bg-black text-white" value="English">
+          <option selected className="bg-black text-white" value="English">
             English
           </option>
           <option value="Hindi">Hindi</option>
           <option value="Hindi">Spanish</option>
         </select>
 
-        <Link href="" className="mx-5 hover:bg-[#C6C2E7]">
+        <Link
+          href="https://twitter.com/yasinduneth"
+          target="_blank"
+          rel="noopener"
+          className="mx-5 hover:bg-[#C6C2E7]"
+        >
           <TwitterIcon className="h-16 w-16 lg:p-5 xl:p-4" />
         </Link>
-        <h4 className="mx-5 hover:bg-[#C6C2E7]">
+        <Link
+          target="_blank"
+          rel="noopener"
+          href="https://www.linkedin.com/in/yasinduneth/"
+          className="mx-5 hover:bg-[#C6C2E7]"
+        >
           <LinkedInIcon className="h-16 w-16 lg:p-5 xl:p-4" />
-        </h4>
-        <h4 className="mx-5 hover:bg-[#C6C2E7]">
+        </Link>
+        <Link
+          target="_blank"
+          rel="noopener"
+          href="https://twitter.com/yasinduneth"
+          className="mx-5 hover:bg-[#C6C2E7]"
+        >
           <FacebookIcon className="h-16 w-16 lg:p-5 xl:p-4" />
-        </h4>
+        </Link>
       </div>
     </div>
   );

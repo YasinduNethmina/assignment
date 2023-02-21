@@ -47,11 +47,9 @@ const NavBar: FC<Props> = (props: Props) => {
           <button className="mx-2 hidden bg-black px-4 py-2 text-lg text-white lg:block">
             SWAP
           </button>
-          <Link href="/pool">
-            <button className="mx-2 hidden px-4 py-2 text-lg hover:bg-[#C6C2E7] lg:block">
-              POOLS
-            </button>
-          </Link>
+          <button className="mx-2 hidden px-4 py-2 text-lg hover:bg-[#C6C2E7] lg:block">
+            POOLS
+          </button>
           <button className="mx-2 hidden px-4 py-2 text-lg hover:bg-[#C6C2E7] lg:block">
             DASHBOARD
           </button>
@@ -87,70 +85,81 @@ const NavBar: FC<Props> = (props: Props) => {
         <Sidebar handleSidebarFromChild={handleSidebarFromChild} />
       </div>
 
+      {/* CONNECT WALLET OPTIONS */}
       <div
         className={
           connectWallet
-            ? "absolute top-1/3 left-1/2 z-50 mt-10 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/3 transform border-2 border-black bg-[#E6E4F6] p-4 text-center md:w-1/3"
+            ? "connect-wallet absolute top-1/3 left-1/2 z-50 mt-10 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/3 transform border-2 border-black bg-[#E6E4F6] p-4 text-center md:w-1/3"
             : "hidden"
         }
       >
-        <div className="w-full">
-          <button
-            onClick={() => setConnectWallet((prev) => !prev)}
-            className="absolute right-5 transition-all hover:text-red-500"
-          >
-            ✖
-          </button>
-
-          <div className="my-8 flex items-center justify-around text-center">
-            <button className="ml-2 flex w-2/5 items-center justify-center border-2 border-black py-4 px-4 transition-all hover:border-blue-600 hover:bg-blue-200 hover:text-blue-600 md:flex md:py-1 xl:mb-0">
-              <Image
-                src={metamaskImg}
-                className="h-10 w-10 rounded-xl"
-                alt="metamask"
-              />
-              <h4 className="hidden pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
-                Metamask
-              </h4>
+        <div className="flex w-full items-center justify-center">
+          <div className="w-full">
+            <button
+              onClick={() => setConnectWallet((prev) => !prev)}
+              className="absolute right-5 top-4 transition-all hover:text-red-500"
+            >
+              ✖
             </button>
-            <button className="ml-2 flex w-2/5 items-center justify-center border-2 border-black py-4 px-4 transition-all hover:border-blue-600 hover:bg-blue-200 hover:text-blue-600 md:flex md:py-1 xl:mb-0">
-              <Image
-                src={braveImg}
-                className="h-10 w-10 rounded-xl"
-                alt="brave"
-              />
-              <h4 className="hidden pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
-                Brave Wallet
-              </h4>
+
+            <div className="mt-5 flex items-center justify-around text-center">
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+                <div className="items-center justify-center md:flex">
+                  <Image
+                    src={metamaskImg}
+                    className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
+                    alt="metamask"
+                  />
+                  <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
+                    Metamask
+                  </h4>
+                </div>
+              </button>
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+                <div className="items-center justify-center md:flex">
+                  <Image
+                    src={braveImg}
+                    className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
+                    alt="metamask"
+                  />
+                  <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
+                    Brave
+                  </h4>
+                </div>
+              </button>
+            </div>
+
+            <div className="my-4 flex items-center justify-around text-center">
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+                <div className="items-center justify-center md:flex">
+                  <Image
+                    src={metamaskImg}
+                    className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
+                    alt="metamask"
+                  />
+                  <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
+                    Metamask
+                  </h4>
+                </div>
+              </button>
+              <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] md:flex md:p-4 md:py-1 xl:mb-0">
+                <div className="items-center justify-center md:flex">
+                  <Image
+                    src={metamaskImg}
+                    className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
+                    alt="metamask"
+                  />
+                  <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
+                    Metamask
+                  </h4>
+                </div>
+              </button>
+            </div>
+
+            <button className="mt-8 rounded-xl bg-blue-600 px-4 py-3 text-xs font-extrabold tracking-wider text-white transition-all hover:bg-blue-700 md:text-base">
+              CONNECT WALLET
             </button>
           </div>
-
-          <div className="my-8 flex items-center justify-around text-center">
-            <button className="ml-2 flex w-2/5 items-center justify-center border-2 border-black py-4 px-4 transition-all hover:border-blue-600 hover:bg-blue-200 hover:text-blue-600 md:flex md:py-1 xl:mb-0">
-              <Image
-                src={metamaskImg}
-                className="h-10 w-10 rounded-xl"
-                alt="metamask"
-              />
-              <h4 className="hidden pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
-                Metamask
-              </h4>
-            </button>
-            <button className="ml-2 flex w-2/5 items-center justify-center border-2 border-black py-4 px-4 transition-all hover:border-blue-600 hover:bg-blue-200 hover:text-blue-600 md:flex md:py-1 xl:mb-0">
-              <Image
-                src={braveImg}
-                className="h-10 w-10 rounded-xl"
-                alt="brave"
-              />
-              <h4 className="hidden pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
-                Brave Wallet
-              </h4>
-            </button>
-          </div>
-
-          <button className="rounded-xl bg-blue-600 px-4 py-3 text-xs font-extrabold tracking-wider text-white transition-all hover:bg-blue-700 md:text-base">
-            CONNECT WALLET
-          </button>
         </div>
       </div>
     </>
