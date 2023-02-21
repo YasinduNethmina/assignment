@@ -16,7 +16,7 @@ export default function RootLayout({
       <head />
 
       <body className="bg-[#E6E4F6] dark:bg-[#31353F]">
-        <ThemeProvider enableSystem={false} attribute="class">
+        <ThemeProvider enableSystem={true} attribute="class">
           <HeadingBar />
           <NavBar />
 
