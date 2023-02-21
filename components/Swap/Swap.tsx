@@ -68,8 +68,8 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           settingsActice || tokenActive
-            ? " w-full border-2 border-black blur-sm dark:border-[#9A9E9E]"
-            : " w-full border-2 border-black dark:border-[#9A9E9E]"
+            ? "swap w-full border-2 border-black blur-sm dark:border-[#9A9E9E]"
+            : "swap w-full border-2 border-black dark:border-[#9A9E9E]"
         }
       >
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
