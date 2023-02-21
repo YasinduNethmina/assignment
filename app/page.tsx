@@ -23,7 +23,7 @@ export default function Home() {
           alt="banner-img"
         />
 
-        <div className="absolute left-1/2 top-1/2 z-40 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform bg-black xl:top-1/3 xl:-translate-y-1/2">
+        <div className="absolute left-1/2 top-1/2 z-40 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform bg-black xl:top-1/2 xl:-translate-y-1/2">
           <Swap />
         </div>
       </main>
