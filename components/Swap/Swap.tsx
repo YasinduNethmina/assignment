@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
-import { TuneIcon, SearchIcon } from "@/utils/MaterialIcons";
+import Tune from "@mui/icons-material/Tune";
+import Search from "@mui/icons-material/Search";
 import EtherImg from "../../public/assets/cryptoLogos/eth.png";
 import Image from "next/image";
 
@@ -37,7 +38,7 @@ const Swap = (props: Props) => {
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
           <h4 className="py-5 text-center text-2xl font-bold">Swap</h4>
           <button>
-            <TuneIcon />
+            <Tune />
           </button>
         </div>
         <div
@@ -77,7 +78,7 @@ const Swap = (props: Props) => {
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
           <h4 className="text-center text-2xl font-bold md:py-5">Swap</h4>
           <button onClick={() => setSettingsActive((prev) => !prev)}>
-            <TuneIcon />
+            <Search />
           </button>
         </div>
 
@@ -161,7 +162,7 @@ const Swap = (props: Props) => {
         </div>
 
         <div>
-          <SearchIcon className="absolute top-16 left-8 mt-1 text-gray-400" />
+          <Search className="absolute top-16 left-8 mt-1 text-gray-400" />
           <input
             value={searchToken}
             type="text"

@@ -1,5 +1,8 @@
 import { useState, FC } from "react";
-import { ArrowDropDownIcon, MenuIcon } from "@/utils/MaterialIcons";
+
+import Menu from "@mui/icons-material/Menu";
+import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
+
 import Sidebar from "../SideBar/Sidebar";
 import Networks from "./Networks/Networks";
 import Image from "next/image";
@@ -38,7 +41,7 @@ const NavBar: FC<Props> = (props: Props) => {
             onClick={() => setSidebarActive((prev) => !prev)}
             className="mr-5 block lg:hidden"
           >
-            <MenuIcon className="text-3xl" />
+            <Menu className="text-3xl" />
           </button>
 
           <Image
@@ -66,7 +69,7 @@ const NavBar: FC<Props> = (props: Props) => {
             onClick={() => setShowNetwork((prev) => !prev)}
             className="flex items-center justify-center border-2 border-black p-3 font-bold transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:border-[#1b2028] dark:hover:bg-[#1B2028] dark:hover:text-[#9A9E9E] lg:mr-5"
           >
-            ETHEREUM <ArrowDropDownIcon />
+            ETHEREUM <ArrowDropDown />
           </button>
           <button
             onClick={() => setConnectWallet((prev) => !prev)}
