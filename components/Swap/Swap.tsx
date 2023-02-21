@@ -1,6 +1,3 @@
-// use client directive to enable client-side features
-"use client";
-
 import { useState } from "react";
 import axios from "axios";
 

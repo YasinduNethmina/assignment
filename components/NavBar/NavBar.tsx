@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, FC } from "react";
 import { ArrowDropDownIcon, MenuIcon } from "@/utils/MaterialIcons";
 import Sidebar from "../SideBar/Sidebar";
