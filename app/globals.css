@@ -41,12 +41,16 @@ input[type="number"] {
   .navbar {
     display: none;
   }
+
+  .footer {
+    display: none;
+  }
 }
 
 @media (max-height: 800px) {
   .swap {
     position: absolute;
-    bottom: -0.8rem;
+    bottom: -1.2rem;
   }
 
   .connect-wallet {

@@ -73,7 +73,7 @@ const Swap: FC = (props: Props) => {
         }
       >
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
-          <h4 className="text-center text-2xl font-bold md:py-5">Swap</h4>
+          <h4 className="text-center text-2xl font-bold md:py-1">Swap</h4>
           <button onClick={() => setSettingsActive((prev) => !prev)}>
             <Sliders />
           </button>
@@ -86,12 +86,12 @@ const Swap: FC = (props: Props) => {
             className="mt-4 w-80 border-2 border-black py-2 pl-5 text-3xl font-extrabold  text-gray-500 placeholder-gray-400 outline-none dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-gray-300 dark:placeholder-gray-400"
           />
           <p className="pl-8 pt-1 text-start text-sm">≈ $23,496.00</p>
-          <p className="hidden text-4xl md:block">↕️</p>
+          <p className="hidden text-xl md:block">↕️</p>
 
           <button
             onClick={() => setTokenActive((prev) => !prev)}
             name="coinList"
-            className="absolute right-10 top-12 mt-3 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-24 md:mt-1"
+            className="absolute right-10 top-12 mt-3 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-16 md:mt-0"
             id="coinList"
           >
             {tokenValue ? tokenValue : "BTC"}
@@ -107,7 +107,7 @@ const Swap: FC = (props: Props) => {
           <button
             onClick={() => setTokenActive((prev) => !prev)}
             name="coinList"
-            className="absolute top-32 right-10 mt-7 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-48 md:mt-11"
+            className="absolute top-32 right-10 mt-7 w-20 rounded-sm border-2 border-black p-1 shadow-xl outline-none transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white dark:hover:border-[#9A9E9E] dark:hover:bg-[#1B2028] md:top-40"
             id="coinList"
           >
             {tokenValue ? tokenValue : "USDT"}
@@ -145,7 +145,7 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           tokenActive
-            ? "anim absolute top-1/2 left-1/2 z-40 mt-5 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:mt-5 md:mt-10"
+            ? "anim absolute top-1/2 left-1/2 z-40 mt-1 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:mt-0 md:-mt-4"
             : "hidden h-0 w-0"
         }
       >
@@ -237,7 +237,7 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           settingsActice
-            ? "anim swap absolute top-1/2 left-1/2 z-40 mt-5 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-8 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:mt-5 md:mt-10"
+            ? "anim swap absolute top-1/2 left-1/2 z-40 mt-1 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-8 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:mt-0 md:-mt-4"
             : "hidden h-0 w-0"
         }
       >

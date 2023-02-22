@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Sidebar: FC<Props> = ({ handleSidebarFromChild }) => {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState<boolean>(false);
   const { systemTheme, theme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;

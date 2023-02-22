@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import Image from "next/image";
 
 import Sidebar from "../SideBar/Sidebar";
@@ -12,7 +12,7 @@ import braveImg from "../../public/assets/walletLogos/brave.png";
 
 type Props = {};
 
-const NavBar = (props: Props) => {
+const NavBar:FC = (props: Props) => {
   const [sidebarActive, setSidebarActive] = useState<boolean>(false);
   const [connectWallet, setConnectWallet] = useState<boolean>(false);
   const [showNetwork, setShowNetwork] = useState<boolean>(false);

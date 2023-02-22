@@ -16,7 +16,7 @@ const HeadingBar: FC = (props: Props) => {
   if (!mounted) return null;
 
   return (
-    <div className="absolute top-0 z-50 hidden w-full border-black bg-[#E6E4F6] dark:bg-[#31353F] dark:text-[#9A9E9E] lg:flex">
+    <div className="headingbar absolute top-0 z-50 hidden w-full border-black bg-[#E6E4F6] dark:bg-[#31353F] dark:text-[#9A9E9E] lg:flex">
       <div className="ml-16 hidden w-1/2 items-center justify-start py-2 md:flex">
         <h4 className="mr-10 hidden text-xl font-bold transition-all dark:hover:text-white lg:block lg:text-sm xl:text-xl">
           Total Deposits: $4,782,541,899
