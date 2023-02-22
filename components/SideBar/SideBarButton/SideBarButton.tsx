@@ -3,7 +3,7 @@ import React, { FC, ReactElement } from "react";
 interface Props {
   title: string;
   icon?: ReactElement;
-  func?: any;
+  func?: () => void;
 }
 
 const SideBarButton: FC<Props> = ({ title, icon, func }) => {

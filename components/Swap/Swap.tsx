@@ -21,7 +21,7 @@ const Swap: FC = (props: Props) => {
       .then((res) => res.data);
   });
 
-  const handleTokenSelect = (coin: any) => {
+  const handleTokenSelect = (coin: number): void => {
     setTokenValue(coin);
     setTokenActive((prev) => !prev);
   };

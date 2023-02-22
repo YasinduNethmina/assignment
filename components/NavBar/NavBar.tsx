@@ -12,7 +12,7 @@ import braveImg from "../../public/assets/walletLogos/brave.png";
 
 type Props = {};
 
-const NavBar:FC = (props: Props) => {
+const NavBar: FC = (props: Props) => {
   const [sidebarActive, setSidebarActive] = useState<boolean>(false);
   const [connectWallet, setConnectWallet] = useState<boolean>(false);
   const [showNetwork, setShowNetwork] = useState<boolean>(false);
@@ -76,7 +76,7 @@ const NavBar:FC = (props: Props) => {
       <div
         className={
           showNetwork
-            ? "absolute right-0 top-16 z-50 pr-4 sm:right-0 md:right-12 lg:top-36 lg:right-64"
+            ? "absolute right-1 top-16 z-50 pr-3 sm:right-1 md:right-12 lg:top-32 lg:right-64 lg:mr-5"
             : "hidden"
         }
       >
@@ -91,7 +91,7 @@ const NavBar:FC = (props: Props) => {
       <div
         className={
           connectWallet
-            ? "connect-wallet anim2 absolute top-1/3 left-1/2 z-50 mt-10 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/3 transform border-2 border-black bg-[#E6E4F6] p-4 text-center dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white md:w-1/3"
+            ? "connect-wallet anim2 absolute top-1/2 left-1/2 z-50 mt-2 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-4 text-center dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white md:w-1/3 lg:mt-12"
             : "hidden"
         }
       >
@@ -120,12 +120,12 @@ const NavBar:FC = (props: Props) => {
               <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:bg-[#1B2028] md:flex md:p-4 md:py-1 xl:mb-0">
                 <div className="items-center justify-center md:flex">
                   <Image
-                    src={braveImg}
+                    src={metamaskImg}
                     className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
                     alt="metamask"
                   />
                   <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
-                    Brave
+                    Metamask
                   </h4>
                 </div>
               </button>
@@ -137,7 +137,7 @@ const NavBar:FC = (props: Props) => {
                   <Image
                     src={braveImg}
                     className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
-                    alt="metamask"
+                    alt="brave"
                   />
                   <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
                     Brave
@@ -147,12 +147,12 @@ const NavBar:FC = (props: Props) => {
               <button className="ml-2 flex w-2/5 items-center justify-center rounded-xl border-2 border-black p-2 text-black transition-all hover:bg-[#C6C2E7] dark:border-[#9A9E9E] dark:text-white dark:hover:bg-[#1B2028] md:flex md:p-4 md:py-1 xl:mb-0">
                 <div className="items-center justify-center md:flex">
                   <Image
-                    src={metamaskImg}
+                    src={braveImg}
                     className="mx-auto h-8 w-8 rounded-xl lg:h-10 lg:w-10"
                     alt="metamask"
                   />
                   <h4 className="pl-2 text-center font-bold md:text-xs lg:block lg:text-sm xl:text-lg">
-                    Metamask
+                    Brave
                   </h4>
                 </div>
               </button>

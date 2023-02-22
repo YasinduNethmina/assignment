@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
 /* Hide input box number up down buttons */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
