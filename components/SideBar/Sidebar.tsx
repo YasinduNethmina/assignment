@@ -55,7 +55,7 @@ const Sidebar: FC<Props> = ({ handleSidebarFromChild }) => {
             </div>
           </div>
 
-          <button className="shadow:xl absolute bottom-10 left-28 border-2 border-black p-2 transition-all hover:bg-[#C6C2E7] dark:rounded-md dark:border-blue-600 dark:bg-blue-600 dark:font-bold dark:hover:border-blue-700 dark:hover:bg-blue-700 sm:left-48">
+          <button className="shadow:xl relative top-10 border-2 border-black p-2 transition-all hover:bg-[#C6C2E7] dark:rounded-md dark:border-blue-600 dark:bg-blue-600 dark:font-bold dark:hover:border-blue-700 dark:hover:bg-blue-700">
             CONNECT WALLET
           </button>
         </div>

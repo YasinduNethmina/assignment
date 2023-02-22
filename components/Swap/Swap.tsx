@@ -68,8 +68,8 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           settingsActice || tokenActive
-            ? "swap w-full border-2 border-black blur-sm dark:border-[#9A9E9E]"
-            : "swap w-full border-2 border-black dark:border-[#9A9E9E]"
+            ? "swap w-full border-2 border-black blur-sm dark:border-[#9A9E9E] dark:bg-[#1B2028]"
+            : "swap w-full border-2 border-black dark:border-[#9A9E9E] dark:bg-[#1B2028]"
         }
       >
         <div className="mx-auto flex w-full justify-between bg-[#D9D9D9] px-10 text-black dark:bg-[#31353F] dark:text-white">
@@ -145,7 +145,7 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           tokenActive
-            ? "anim absolute top-1/2 left-1/2 z-40 mt-1 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:mt-0 md:-mt-4"
+            ? "anim absolute top-1/2 left-1/2 z-40 -mt-4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:mt-0 md:-mt-4"
             : "hidden h-0 w-0"
         }
       >
@@ -237,7 +237,7 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           settingsActice
-            ? "anim swap absolute top-1/2 left-1/2 z-40 mt-1 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-8 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:mt-0 md:-mt-4"
+            ? "anim swap absolute top-1/2 left-1/2 z-40 -mt-4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-8 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:mt-0 md:-mt-4"
             : "hidden h-0 w-0"
         }
       >

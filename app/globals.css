@@ -53,15 +53,48 @@ input[type="number"] {
   }
 }
 
-@media (max-height: 800px) {
+.swap {
+  position: absolute;
+  bottom: -1.2rem;
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
   .swap {
     position: absolute;
     bottom: -1.2rem;
+  }
+}
+
+@media (max-height: 800px) and (max-width: 600px) {
+  .swap {
+    position: absolute;
+    bottom: 0;
   }
 
   .connect-wallet {
     position: absolute;
     top: 21rem;
+  }
+}
+
+@media (max-height: 620px) and (min-width: 1024px) {
+  .swap {
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media (max-height: 620px) and (max-width: 1024px) {
+  .swap {
+    position: absolute;
+    top: -10rem;
+    background-color: #fff;
+  }
+}
+
+@media (min-height: 810px) and (min-width: 375px) {
+  .sidebar-wallet-connect {
+    display: none;
   }
 }
 

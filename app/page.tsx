@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import Image from "next/image";
