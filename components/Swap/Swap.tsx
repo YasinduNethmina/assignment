@@ -145,7 +145,7 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           tokenActive
-            ? "anim absolute top-1/2 left-1/2 z-40 -mt-4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:mt-0 md:-mt-4"
+            ? "anim tokenSelect absolute top-1/2 left-1/2 z-40 -mt-4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-white p-4 dark:border-[#9A9E9E] dark:bg-[#31353F] sm:mt-0 md:-mt-4"
             : "hidden h-0 w-0"
         }
       >
@@ -237,7 +237,7 @@ const Swap: FC = (props: Props) => {
       <div
         className={
           settingsActice
-            ? "anim swap absolute top-1/2 left-1/2 z-40 -mt-4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-8 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:mt-0 md:-mt-4"
+            ? "anim swap settings absolute top-1/2 left-1/2 z-40 -mt-4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-8 dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:mt-0 md:-mt-4"
             : "hidden h-0 w-0"
         }
       >
@@ -277,7 +277,7 @@ const Swap: FC = (props: Props) => {
         <div className="my-5 flex w-full justify-between">
           <button
             onClick={() => setSettingsActive((prev) => !prev)}
-            className="w-2/5 border-2 border-black bg-gray-200 text-black transition-all hover:border-blue-600 hover:bg-blue-200 hover:text-blue-600"
+            className="w-2/5 border-2 border-black bg-gray-200 text-black transition-all hover:border-blue-600 hover:bg-blue-200 hover:text-blue-600 dark:border-[#9A9E9E]"
           >
             Discard
           </button>
