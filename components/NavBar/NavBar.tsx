@@ -91,7 +91,7 @@ const NavBar: FC = (props: Props) => {
       <div
         className={
           connectWallet
-            ? "connect-wallet anim2 absolute top-1/2 left-1/2 z-50 mt-2 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-4 text-center dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white md:w-1/3 lg:mt-12"
+            ? "connect-wallet anim2 absolute top-1/2 left-1/2 z-50 mt-1 flex h-80 w-2/3 -translate-x-1/2 -translate-y-1/2 transform border-2 border-black bg-[#E6E4F6] p-4 text-center dark:border-[#9A9E9E] dark:bg-[#31353F] dark:text-white sm:-mt-10 md:w-1/3 lg:mt-0"
             : "hidden"
         }
       >
