@@ -135,7 +135,7 @@ const Swap: FC = (props: Props) => {
             </div>
           </div>
 
-          <button className="my-4 w-80 bg-[#E6E4F6] py-2 font-bold transition-all hover:bg-purple-300 dark:border-2 dark:border-[#9A9E9E] dark:bg-[#1B2028] dark:hover:bg-gray-800">
+          <button className="my-4 w-80 bg-[#E6E4F6] py-2 font-bold transition-all duration-300 hover:translate-y-1 hover:bg-purple-300 dark:border-2 dark:border-[#9A9E9E] dark:bg-[#1B2028] dark:hover:bg-gray-800">
             CONNECT WALLET
           </button>
         </div>
