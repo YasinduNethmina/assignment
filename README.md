@@ -1,4 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 😎 This is an assignment did for the Dapps.co interview
+
+## Features 
+#### Swap Component (Swap Advanced Settings, Coin Filter & Selection Menu Included!)
+#### Dark / Night Theme
+#### NavbBar
+#### SideBar (For mobile users)
+#### HeadingBar
+#### Wallet Section
+#### Network Section
+#### Footer
+
+<br/>
+
+## Tech Stack
+#### Next Js
+#### Typescript
+#### Tailwind CSS
+#### Next Themes
+#### Styled Icons
+#### React Feathers
+#### React Query
+#### Axios
+
+<br/>
+
+<image src="./resources/1.png" alt="img1"/>
+<image src="./resources/2.png" alt="img2"/>
+<image src="./resources/3.png" alt="img3"/>
+<image src="./resources/4.png" alt="img4"/>
+
+<br/>
+
+# This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
